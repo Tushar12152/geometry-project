@@ -25,11 +25,39 @@ function calculateRectangleArea(){
     const height=parseFloat(heightField.value);
     heightField.value='';
     
-    if(isNaN(width||isNaN(height))){
+    if(isNaN(width)||isNaN(height)){
         alert('please enter a number');
         return;
     }
 
     const rectangleArea=width*height;
     document.getElementById('view-rectangle').innerText=rectangleArea;
+}
+
+// reusable Function
+
+function calculateperallelogramArea(){
+      const base= getInputValue('perallelogram-base');
+      
+      const height=getInputValue('perallelogram-height');
+      if(isNaN(base)||isNaN(height)){
+        alert('please enter a number');
+        return
+      }
+
+      const perallelogramArea=base*height;
+    //   document.getElementById('view-perallelogram').innerText=perallelogramArea;
+    setViewValue('view-perallelogram', perallelogramArea);
+}
+
+// reusable Function get input value
+function getInputValue(inputId){
+    const inputField=document.getElementById(inputId);
+    const input=parseFloat(inputField.value);
+    inputField.value='';
+     return input;
+}
+function setViewValue(viewId,Area){
+    const view=document.getElementById(viewId);
+    view.innerText=Area;
 }
