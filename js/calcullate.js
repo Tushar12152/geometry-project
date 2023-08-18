@@ -61,3 +61,16 @@ function setViewValue(viewId,Area){
     const view=document.getElementById(viewId);
     view.innerText=Area;
 }
+
+function calculateellipseArea(){
+    const major=getInputValue('ellipse-major-length')
+   const minor=getInputValue('ellipse-minor-length')
+   if(isNaN(major)||isNaN(minor)){
+    alert('please enter a number')
+    return;
+   }
+   
+   const ellipseArea=3.14*major*minor;
+   setViewValue('view-ellipse',ellipseArea);
+
+}
