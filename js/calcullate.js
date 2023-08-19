@@ -74,3 +74,17 @@ function calculateellipseArea(){
    setViewValue('view-ellipse',ellipseArea);
 
 }
+function calculateRhombusArea(){
+    const d1=getInputValue('Rhombus-d1');
+    const d2=getInputValue('Rhombus-d2');
+
+    if(isNaN(d1)||isNaN(d2)){
+        alert('please enter a number')
+        return;
+       }
+
+
+    const RhombusArea=0.5*d1*d2;
+    setViewValue('view-Rhombus',RhombusArea);
+    
+}
