@@ -88,3 +88,15 @@ function calculateRhombusArea(){
     setViewValue('view-Rhombus',RhombusArea);
     
 }
+
+function calculatePentagonArea(){
+     const p=getInputValue('Pentagon-p');
+     const b=getInputValue('Pentagon-b')
+       if(isNaN(p)||isNaN(b)){
+        alert('please enter a number');
+        return;
+       }
+     const PentagonArea=0.5*p*b;
+                   
+     setViewValue('view-Pentagon',PentagonArea)
+}
